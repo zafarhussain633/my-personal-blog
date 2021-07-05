@@ -4,7 +4,7 @@ function Footer() {
     return (
         <div>
             <footer className={styles.footer} >
-                this is footer
+                creater by zafar @ copy right reserved
             </footer>
            
         </div>

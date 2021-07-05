@@ -23,3 +23,16 @@ li{
   width: 20%;
   text-align: center;
 }
+#apiData{
+  background-color: grey;
+ font-weight: bold;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+ 
+}
+
+footer {
+  position: absolute;
+  bottom: 5px;
+}

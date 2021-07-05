@@ -17,7 +17,9 @@ export default function Home() {
           <h2 className={styles.title}>welcome to Next.js</h2>
           <p className={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur minima fugiat aliquam provident aperiam dicta odit, veritatis accusantium quod quos dolore quidem eos consectetur dolor, pariatur ipsam atque labore velit expedita! Vero nam accusamus inventore voluptatem, natus quo adipisci tempore soluta quasi sapiente rerum fuga! Placeat quaerat ullam perferendis?</p>
         </div>
-        <Link href="/data/data"><a className={styles.btn}>see data from Api</a></Link>
+        <div>
+           <Link href="/data/data"><a className={styles.btn} id="apiData">see data from Api</a></Link>
+        </div>
     </>
   )
 }
