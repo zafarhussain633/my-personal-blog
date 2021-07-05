@@ -11,6 +11,7 @@ function Notfound() {
        setTimeout(()=>{
            router.push("/") // redirect to home page after 2 sec
        },2000)
+       fetchBusinesses(); // to avoid warning while deploying
     }, []);
 
 
