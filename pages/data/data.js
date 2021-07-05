@@ -11,7 +11,7 @@ export const getStaticProps =  async ()=>{  // use for getting data form Api
     }
 }
 
-function data({data}) {
+function Data({data}) {
     return (
         <div>
            <h2 className={styles.title}>list of data</h2>
@@ -22,4 +22,4 @@ function data({data}) {
     )
 }
 
-export default data
+export default Data
