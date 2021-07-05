@@ -16,7 +16,7 @@ function data({data}) {
         <div>
            <h2 className={styles.title}>list of data</h2>
            {
-               data.map((value)=><li key ={value.length} className={styles.text}>Name:  {value.name}</li>)
+               data.map((value,index)=><li key ={index} className={styles.text}>Name:  {value.name}</li>)
            }
         </div>
     )
