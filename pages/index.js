@@ -1,6 +1,6 @@
 import MainPage from '../comp/home'
 
-export default function Home() {
+function Home() {
   return (
     <> 
         <div className="container" id="homepage-text">
@@ -27,6 +27,8 @@ export default function Home() {
     </>
   )
 }
+
+export default Home;
 
 
 
