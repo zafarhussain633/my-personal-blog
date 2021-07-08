@@ -1,4 +1,4 @@
-import { ArticlesData } from "./strapiApi/data";
+import ArticlesData from "../comp/articlescard";
 
 const Articles = ()=>{
     return (

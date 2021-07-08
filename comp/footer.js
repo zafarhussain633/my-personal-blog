@@ -30,7 +30,7 @@ function Footer() {
                  <div className="col-sm-4 mt-4">
                     <h3 className="text-light">Have a Question ?</h3>
                     <div><i className="fas fa-map-marker-alt p-4" style={{color:"#588da8"}}></i> new york,USA</div>
-                    <div><i class="fas fa-phone p-4  " style={{color:"#588da8"}}></i> +96 987654321</div>
+                    <div><i className="fas fa-phone p-4  " style={{color:"#588da8"}}></i> +96 987654321</div>
                     <div><i className="fas fa-paper-plane p-4" style={{color:"#588da8"}}></i> example@gmail.com</div>
                 </div>
             </div>

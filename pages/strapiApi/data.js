@@ -1,5 +1,5 @@
 import React,{useState,useEffect}from 'react'
-import {BlogcontentRight,BlogcontentLeft,ArticlesCard} from '../../comp/blogcontent'
+import {BlogcontentRight,BlogcontentLeft} from '../../comp/blogcontent'
 
 
 function BlogData() {
@@ -51,44 +51,6 @@ function BlogData() {
 
 
 
-  function ArticlesData() {
-    const [Artdata, setArtData] = useState(null);
-  
-    useEffect(() => {
-      fetch('http://localhost:1337/Posts')
-        .then((res) => res.json())
-        .then((v) => {
-          setArtData(v);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }, []);
-  
-    return (
-        <>
-         {
-             Artdata?.map(v=>( 
-                <ArticlesCard
-                key={v.id}
-                blogImage ={v.blogImage}
-                date={v.date}
-                title={v.title}
-                userName={v.userName}
-                userImage ={v.userImage}
-                userDesignation = {v.userDesignation}
-                 />
-             )
-             )    
-              
-         }
-         
-        </>
-    
-    );
-  }
 
 
-
-
-  export {BlogData,ArticlesData};
+export default BlogData;
