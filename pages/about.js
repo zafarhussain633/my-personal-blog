@@ -1,3 +1,4 @@
+import Adminlogo from "../comp/adminlogo"
 
 
 const About = ()=>{
@@ -14,8 +15,7 @@ const About = ()=>{
 
             <div className="col-sm-4">    
                 <div>
-                    {/* <img className="rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Bill_Gates_2017_%28cropped%29.jpg" alt="bil" width="80px" height="80px" /> */}
-                    
+                    <Adminlogo />
                     </div>
                     <h4 className="font-weight-bold">Bill gates</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, beatae.</p>
