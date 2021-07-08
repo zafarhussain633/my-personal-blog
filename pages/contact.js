@@ -22,7 +22,7 @@ function Contact() {
 
              <div className="col-sm-3 text-center  mt-5">
                 <div className="">
-                <i class="fas fa-phone p-4 iconbgColor rounded-circle text-light"></i>
+                <i className="fas fa-phone p-4 iconbgColor rounded-circle text-light"></i>
                 </div>
                 <div>
                   <h3>Phone</h3>
@@ -32,7 +32,7 @@ function Contact() {
 
              <div className="col-sm-3 text-center  mt-5">
                 <div className="">
-                <i class="fas fa-paper-plane p-4 iconbgColor rounded-circle text-light"></i>
+                <i className="fas fa-paper-plane p-4 iconbgColor rounded-circle text-light"></i>
                 </div>
                 <div>
                   <h3>Email</h3>
@@ -42,7 +42,7 @@ function Contact() {
 
              <div className="col-sm-3 text-center  mt-5">
                 <div className="">
-                <i class="fas fa-globe-asia p-4 iconbgColor rounded-circle text-light"></i>
+                <i className="fas fa-globe-asia p-4 iconbgColor rounded-circle text-light"></i>
                 </div>
                 <div>
                   <h3>Website</h3>

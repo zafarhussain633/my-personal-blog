@@ -1,20 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 
 function Notfound() {
-    const router = useRouter();
-
-    useEffect(() => {
-       setTimeout(()=>{
-           router.push("/") // redirect to home page after 2 sec
-       },2000)
-       fetchBusinesses(); // to avoid warning while deploying
-    }, []);
-
-
     return (
         <div className="not-found">
             <h1>ooops</h1>
