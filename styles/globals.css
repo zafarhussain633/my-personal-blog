@@ -1,38 +1,72 @@
-body{
-  padding: 2rem;
-  background-color: rgb(250, 245, 235);
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
-a{
-  margin : 1rem;
-  background-color: aquamarine;
-  padding:10px;
 
 
+
+#big-text{
+    color: #313b44;
+    font-size: 16vw ;
+    font-weight: 900;
+    font-family: sans-serif;
+    line-height: 1.2;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
-.logo{
-  display: inline-block;
-  display: flex;
-  justify-content: space-around;
+#big-text>span{
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #313b44;
 }
 
-li{
-  padding: 10px;
-  background-color: white;
-  margin: 5px;
-  list-style: none;
-  width: 20%;
-  text-align: center;
+
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    font-family: "Poppins", Arial, sans-serif;
+    margin-bottom: 20px;
 }
-#apiData{
-  background-color: grey;
- font-weight: bold;
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: center;
- 
+p{
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
-footer {
-  position: absolute;
-  bottom: 5px;
+.margin{
+    margin-top: 5rem;
 }
+
+
+
+.iconbgColor{
+   background-color: #588da8;
+}
+
+
+@media(min-width:800px){
+    #homepage-text{
+        width: 75%;
+    }
+    footer{
+        padding: 5rem 8rem 5rem 8rem;
+        margin-top: 5rem;
+    }
+
+    .margin{
+        margin-top: 10rem;
+    }
+    #nav-color{
+        background-color: white;
+    }
+    
+}
+
+

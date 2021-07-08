@@ -1,25 +1,32 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Footer from '../comp/footer'
-import Navbar from '../comp/navbar'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import MainPage from '../comp/home'
 
 export default function Home() {
   return (
     <> 
-    <Head>
-      <title>simple next.js app by_zafar</title>
-      <meta name="keyword" content="next.js"/>
-    </Head>
-     
-        <div>
-          <h2 className={styles.title}>welcome to Next.js</h2>
-          <p className={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur minima fugiat aliquam provident aperiam dicta odit, veritatis accusantium quod quos dolore quidem eos consectetur dolor, pariatur ipsam atque labore velit expedita! Vero nam accusamus inventore voluptatem, natus quo adipisci tempore soluta quasi sapiente rerum fuga! Placeat quaerat ullam perferendis?</p>
+        <div className="container" id="homepage-text">
+          <div className="text-center" id="big-text">M<span>oo</span>se</div>
+          <div className="row mb-5 pb-4">
+
+            <div className="col-sm-8">
+               <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, sint.</h2>
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo tenetur voluptate ad qui, beatae dolore delectus. Quae, minima! Ducimus, ab Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor sed asperiores, blanditiis pariatur voluptas accusamus tempora repudiandae recusandae alias tenetur explicabo veritatis iure ipsum fuga ducimus aut, ea sunt ipsam!!</p>
+            </div>
+
+            <div className="col-sm-4">
+              <div><img className="rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Bill_Gates_2017_%28cropped%29.jpg" alt="bil" width="80px" height="80px" /></div>
+              <h4 className="font-weight-bold">Bill gates</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, beatae.</p>
+            </div>
+          </div>
+
         </div>
+         
         <div>
-           <Link href="/data/data"><a className={styles.btn} id="apiData">see data from Api</a></Link>
+          <MainPage />
         </div>
     </>
   )
 }
+
+
+

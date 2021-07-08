@@ -1,0 +1,31 @@
+@media(min-width:991px){    
+    #nav-menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #logo{
+        text-align: center;
+        font-weight: bolder;
+        margin: 10px;
+    }
+    .nav-link-color{
+        color: rgba(0, 0, 0, 0.897);
+    }
+    #navbarSupportedContent{
+        margin-left: 4rem;
+    }
+
+}
+
+
+    @media(max-width:991px){
+        #nav-color{
+            background-color: black;
+        }
+        .nav-link-color{
+            color: white;
+            font-weight: 400;
+        }
+    }
+    
+    
