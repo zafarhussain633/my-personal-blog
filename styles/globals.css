@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
     font-weight: 400;
     font-family: "Poppins", Arial, sans-serif;
     margin-bottom: 20px;
+    cursor: pointer;
+}
+a,i{
+    cursor: pointer;
 }
 p{
     font-size: 16px;
@@ -49,7 +53,9 @@ p{
 .iconbgColor{
    background-color: #588da8;
 }
-
+.dateColor{
+    color :#307394;
+}
 
 @media(min-width:800px){
     #homepage-text{
