@@ -12,6 +12,7 @@ export const Displaypagging = createContext();
 function ArticlesData() {
   const [Artdata, setArtData] = useState(apidata);
   const [innerpageData, setInnerpageData] = useState(true);
+  const [innerpageId, setInnerpageId] = useState(Number());
 
   useEffect(() => {
     fetch("https://strapi-atlas-blog.herokuapp.com/blogs")
@@ -26,8 +27,9 @@ function ArticlesData() {
       });
   }, []);
 
-  function handleInnerpage(){
+  function handleInnerpage(e){
     setInnerpageData(false)
+    setInnerpageId(e.target.alt)
   }
 
   //  <Displaypagging.Provider value= {innerpageData}>
@@ -41,7 +43,8 @@ function ArticlesData() {
       {innerpageData ? (
         Artdata?.map((v) => (
           <ArticlesCard
-            handleClick={handleInnerpage}
+            handleClick={(e)=>handleInnerpage(e)}
+            value={v.id}
             key={v.id}
             blogImage={v.blogImage}
             date={v.date}
@@ -55,59 +58,40 @@ function ArticlesData() {
       ) : (
         <>
           <BlogcontentRight
-            key={Artdata[0].id}
-            blogImage={Artdata[0].blogImage}
-            date={Artdata[0].date}
-            title={Artdata[0].title}
-            userName={Artdata[0].userName}
-            userImage={Artdata[0].userImage}
-            userDesignation={Artdata[0].userDesignation}
+            key={Artdata[innerpageId].id}
+            blogImage={Artdata[innerpageId].blogImage}
+            date={Artdata[innerpageId].date}
+            title={Artdata[innerpageId].title}
+            userName={Artdata[innerpageId].userName}
+            userImage={Artdata[innerpageId].userImage}
+            userDesignation={Artdata[innerpageId].userDesignation}
           />
-          <InnerpageText />
+          <InnerpageText
+          text={Artdata[innerpageId].text}
+          howItWorksText = {Artdata[innerpageId].howItWorksText}
+           />
         </>
       )}
     </>
   );
 }
 
-function InnerpageText() {
+function InnerpageText(props) {
   return (
     <>
       <div className="container mt-5" id="homepage-text">
         <div className="row mb-5 pb-4">
           <div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo
-              tenetur voluptate ad qui, beatae dolore delectus. Quae, minima!
-              Ducimus, ab Lorem ipsum dolor sit, amet consectetur adipisicing
-              elit. Dolor sed asperiores, blanditiis pariatur voluptas accusamus
-              tempora repudiandae recusandae alias tenetur explicabo veritatis
-              iure ipsum fuga ducimus aut, ea sunt ipsam!!
-            </p>
+            <p>{props.text}</p>
           </div>
           <h2 className="mt-4">
             <b>how it works</b>
           </h2>
-          <p>
-            Lorem ipsum dolor sit amet.lorem50 Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Iste ducimus facere nostrum veritatis
-            quas excepturi reprehenderit eaque amet quia! Asperiores consequatur
-            animi velit minus dicta. Pariatur odit aliquam sunt totam illo
-            veritatis provident amet! Maxime vel perspiciatis animi atque
-            commodi, aspernatur tenetur doloribus, enim culpa totam accusamus
-            cumque natus ipsam.
-          </p>
+          <p>{props.howItWorksText}</p>
           <div>
             <b>On her way she met a copy. </b>
             <span>
-              he copy warned the Little Blind Text, that where it came from it
-              would have been rewritten a thousand times and everything that was
-              left from its origin would be the word "and" and the Little Blind
-              Text should turn around and return to its own, safe country. But
-              nothing the copy said could convince her and so it didn’t take
-              long until a few insidious Copy Writers ambushed her, made her
-              drunk with Longe and Parole and dragged her into their agency,
-              where they abused her for their.
+             {props.text}
             </span>
           </div>
           <div className="mt-4 mb-4">
@@ -194,7 +178,7 @@ function ArticlesCard(props) {
             src={`${props.blogImage}`}
             height="320"
             width="400"
-            alt="na"
+            alt={props.value}
           />
         </a>
 
@@ -205,7 +189,6 @@ function ArticlesCard(props) {
             <i className="m-1 fas fa-comment"> 3 </i>
           </p>
           <h5 className="card-title" onClick={props.handleClick}>
-            {" "}
             <b>{props.title}</b>
           </h5>
           <div className="d-flex mt-3 mb-2">
