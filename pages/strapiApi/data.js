@@ -1,18 +1,20 @@
 import React,{useState,useEffect}from 'react'
 import {BlogcontentRight,BlogcontentLeft} from '../../comp/blogcontent'
-
+import apidata from '../../comp/apidata';
 
 function BlogData() {
     const [bldata, setblData] = useState(null);
   
     useEffect(() => {
-      fetch('http://localhost:1337/Posts')
+      fetch('https://strapi-atlas-blog.herokuapp.com/blogs')
         .then((res) => res.json())
         .then((v) => {
           setblData(v);
         })
         .catch((err) => {
-          console.log(err);
+         if(err){
+           setblData(apidata);
+         }
         });
     }, []);
   

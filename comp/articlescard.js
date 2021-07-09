@@ -1,15 +1,18 @@
 import React, { useState , useEffect } from 'react'
+import apidata from './apidata';
   function ArticlesData() {
     const [Artdata, setArtData] = useState(null);
   
     useEffect(() => {
-      fetch('http://localhost:1337/Posts')
+      fetch('https://strapi-atlas-blog.herokuapp.com/blogs')
         .then((res) => res.json())
         .then((v) => {
           setArtData(v);
         })
         .catch((err) => {
-          console.log(err);
+          if(err){
+            setArtData(apidata);
+          }
         });
     }, []);
   
